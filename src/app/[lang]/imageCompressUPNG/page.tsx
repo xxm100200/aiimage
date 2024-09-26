@@ -23,7 +23,7 @@ const ImageCompressUPNG = ({
     }) => {
 
     const language = getLanguageObj(params.lang);
-    // const regularData = getSinglePage(path.join(language.contentDir, "pages"));
+    const regularData: RegularPage[] = getSinglePage(path.join(language.contentDir, "pages"));
     // const data = regularData.filter(
     //     (page: RegularPage) => page.slug === "imageCompressor",
     // )[0];
