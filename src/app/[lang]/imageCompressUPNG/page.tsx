@@ -19,7 +19,7 @@ const DynamicImageCompressor = dynamic(
 const ImageCompressUPNG = ({
         params,
     }: {
-        params: { regular: string; lang: string };
+        params: { lang: string };
     }) => {
 
     const language = getLanguageObj(params.lang);
