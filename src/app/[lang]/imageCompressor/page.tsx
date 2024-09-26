@@ -16,7 +16,7 @@ const DynamicImageCompressor = dynamic(
     { ssr: false }
 );
 
-const ImageCompressorPage = ({
+const ImageCompressor = ({
         params,
     }: {
         params: { regular: string; lang: string };
@@ -80,4 +80,4 @@ const ImageCompressorPage = ({
     );
 };
 
-export default ImageCompressorPage;
+export default ImageCompressor;
