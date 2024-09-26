@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageCompressor from '@/layouts/components/ImageCompressor';
+//import ImageCompressor from '@/layouts/components/ImageCompressor';
 import HeadInfo from "@/components/HeadInfo";
 import MDXContent from "@/helpers/MDXContent";
 import { getSinglePage, getImageCompressorTextTip } from "@/lib/contentParser";
@@ -9,6 +9,12 @@ import { RegularPage, ImageCompressorLanguage } from "@/types";
 import path from "path";
 import PageHeader from "@/partials/PageHeader";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import dynamic from 'next/dynamic';
+
+const DynamicImageCompressor = dynamic(
+    () => import('@/layouts/components/ImageCompressor'),
+    { ssr: false }
+);
 
 const ImageCompressorPage = ({
         params,
@@ -62,7 +68,7 @@ const ImageCompressorPage = ({
             <PageHeader title={title}>
                 <Breadcrumbs lang={params.lang} />
             </PageHeader>
-            <ImageCompressor languageObj={languageObj} />
+            <DynamicImageCompressor languageObj={languageObj} />
             <section className="section">
                 <div className="container">
                 <div className="content">
