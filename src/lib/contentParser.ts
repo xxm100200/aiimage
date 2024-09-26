@@ -73,17 +73,17 @@ export const getSinglePage = (folder: string) => {
 
 // get all imageCompressor textTip, ex: imageCompressor/textTip.md
 export const getImageCompressorTextTip = (filePath: string) => {
-  const textTipDataPath = path.join(contentPath, filePath);
-  console.log("getImageCompressorTextTip----------getImageCompressorTextTip " + textTipDataPath)
-  if (!fs.existsSync(textTipDataPath)) {
-    notFound();
-  }
+  // const textTipDataPath = path.join(contentPath, filePath);
+  // console.log("getImageCompressorTextTip----------getImageCompressorTextTip " + textTipDataPath)
+  // if (!fs.existsSync(textTipDataPath)) {
+  //   notFound();
+  // }
 
-  const textTipData = readFile(textTipDataPath);
-  const { content, data: frontmatter } = matter(textTipData);
+  // const textTipData = readFile(textTipDataPath);
+  // const { content, data: frontmatter } = matter(textTipData);
 
-  return {
-    frontmatterImgComp: parseFrontmatter(frontmatter),
-    content,
-  };
+  // return {
+  //   frontmatterImgComp: parseFrontmatter(frontmatter),
+  //   content,
+  // };
 };
