@@ -1,0 +1,51 @@
+{
+  "site": {
+    "title": "AiImageX",
+    "base_url": "https://aiimagex.com",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo.png",
+    "logo_darkmode": "/images/logo-darkmode.png",
+    "logo_width": "150",
+    "logo_height": "27",
+    "logo_text": "AiImageX"
+  },
+
+  "settings": {
+    "search": true,
+    "sticky_header": true,
+    "theme_switcher": true,
+    "default_theme": "light",
+    "pagination": 2,
+    "summary_length": 200,
+    "blog_folder": "blog",
+    "books_folder": "books",
+    "default_language": "en",
+    "disable_languages": [],
+    "default_language_in_subdir": false
+  },
+
+  "params": {
+    "contact_form_action": "#",
+    "copyright": "©️2024 AiImageX.com"
+  },
+
+  "navigation_button": {
+    "enable": true,
+    "label": "Get Started",
+    "link": "https://aiimagex.com"
+  },
+
+  "disqus": {
+    "enable": true,
+    "shortname": "AiImageX",
+    "settings": {}
+  },
+
+  "metadata": {
+    "meta_author": "AiImageX",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "AiImageX"
+  }
+}

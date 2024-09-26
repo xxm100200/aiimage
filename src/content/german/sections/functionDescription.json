@@ -1,0 +1,38 @@
+[
+    {
+      "name": "AI Image Compressor",
+      "description": "AI Image Compressor allows you to compress image effortlessly while retaining great quality.",
+      "url": "https://aiimagex.com/ai-image-compressor",
+      "image": "/images/image-compress.svg"
+    },
+    {
+      "name": "AI Image Remove Background",
+      "description": "A utility-first CSS framework",
+      "url": "https://aiimagex.com/ai-image-compressor",
+      "image": "/images/image-compress.svg"
+    },
+    {
+      "name": "Shadcn/ui",
+      "description": "Re-usable components built with Radix UI and Tailwind CSS",
+      "url": "https://aiimagex.com/ai-image-compressor",
+      "image": "/images/image-compress.svg"
+    },
+    {
+      "name": "Vercel",
+      "description": "Cloud platform for static sites and Serverless Functions",
+      "url": "https://aiimagex.com/ai-image-compressor",
+      "image": "/images/image-compress.svg"
+    },
+    {
+      "name": "Github.com",
+      "description": "The world's leading platform for version control and collaborative software development.",
+      "url": "https://aiimagex.com/ai-image-compressor",
+      "image": "/images/image-compress.svg"
+    },
+    {
+      "name": "Woy.ai",
+      "description": "AI Tools Directory",
+      "url": "https://aiimagex.com/ai-image-compressor",
+      "image": "/images/image-compress.svg"
+    }
+  ]
