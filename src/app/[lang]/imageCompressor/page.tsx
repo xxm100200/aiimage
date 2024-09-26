@@ -56,7 +56,7 @@ const ImageCompressorPage = ({
 
     return (
         <>
-            <HeadInfo
+            {/* <HeadInfo
                 lang={params.lang}
             />
             <SeoMeta
@@ -67,15 +67,15 @@ const ImageCompressorPage = ({
             />
             <PageHeader title={title}>
                 <Breadcrumbs lang={params.lang} />
-            </PageHeader>
+            </PageHeader> */}
             <DynamicImageCompressor languageObj={languageObj} />
-            <section className="section">
+            {/* <section className="section">
                 <div className="container">
                 <div className="content">
                     <MDXContent content={content} />
                 </div>
                 </div>
-            </section>
+            </section> */}
         </>
     );
 };
