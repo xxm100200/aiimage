@@ -30,29 +30,29 @@ const ImageCompressUPNG = ({
     // const { frontmatter, content } = data;
     // const { title, meta_title, description, image } = frontmatter;
     
-    // const textTipImgComp = getImageCompressorTextTip(path.join(language.contentDir, "imageCompressor", `textTip.md`));
-    // const { frontmatterImgComp } = textTipImgComp;
+    const textTipImgComp = getImageCompressorTextTip(path.join(language.contentDir, "imageCompressor", `textTip.md`));
+    const { frontmatterImgComp } = textTipImgComp;
 
-    // const languageObj: ImageCompressorLanguage = {
-    //     pageTitle: frontmatterImgComp.pageTitle,
-    //     pageDescription: frontmatterImgComp.pageDescription,
-    //     title: frontmatterImgComp.title,
-    //     description: frontmatterImgComp.description,
-    //     dropzoneText: frontmatterImgComp.dropzoneText,
-    //     compressButton: frontmatterImgComp.compressButton,
-    //     qualityLabel: frontmatterImgComp.qualityLabel,
-    //     originalImage: frontmatterImgComp.originalImage,
-    //     compressedImage: frontmatterImgComp.compressedImage,
-    //     fileName: frontmatterImgComp.fileName,
-    //     fileSize: frontmatterImgComp.fileSize,
-    //     compressionRatio: frontmatterImgComp.compressionRatio,
-    //     downloadButton: frontmatterImgComp.downloadButton,
-    //     resizeOptionLabel: frontmatterImgComp.resizeOptionLabel,
-    //     saveAllButton: frontmatterImgComp.saveAllButton,
-    //     selectedFiles: frontmatterImgComp.selectedFiles,
-    //     originalSize: frontmatterImgComp.originalSize,
-    //     compressed: frontmatterImgComp.compressed
-    // };
+    const languageObj: ImageCompressorLanguage = {
+        pageTitle: frontmatterImgComp.pageTitle,
+        pageDescription: frontmatterImgComp.pageDescription,
+        title: frontmatterImgComp.title,
+        description: frontmatterImgComp.description,
+        dropzoneText: frontmatterImgComp.dropzoneText,
+        compressButton: frontmatterImgComp.compressButton,
+        qualityLabel: frontmatterImgComp.qualityLabel,
+        originalImage: frontmatterImgComp.originalImage,
+        compressedImage: frontmatterImgComp.compressedImage,
+        fileName: frontmatterImgComp.fileName,
+        fileSize: frontmatterImgComp.fileSize,
+        compressionRatio: frontmatterImgComp.compressionRatio,
+        downloadButton: frontmatterImgComp.downloadButton,
+        resizeOptionLabel: frontmatterImgComp.resizeOptionLabel,
+        saveAllButton: frontmatterImgComp.saveAllButton,
+        selectedFiles: frontmatterImgComp.selectedFiles,
+        originalSize: frontmatterImgComp.originalSize,
+        compressed: frontmatterImgComp.compressed
+    };
 
     return (
         <>
