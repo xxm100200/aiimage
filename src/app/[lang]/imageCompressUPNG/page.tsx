@@ -69,7 +69,10 @@ const ImageCompressUPNG = ({
         compressionRatio: '压缩比例',
         downloadButton: '下载压缩图片',
         resizeOptionLabel: 'Resize Option',
-        saveAllButton: 'Save All'
+        saveAllButton: 'Save All',
+        selectedFiles: '选择的文件',
+        originalSize: '原始大小',
+        compressed: '压缩后'
       };
 
     return (
