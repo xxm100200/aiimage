@@ -12,7 +12,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import dynamic from 'next/dynamic';
 
 const DynamicImageCompressor = dynamic(
-    () => import('@/layouts/components/ImageCompressor'),
+    () => import('@/components/ImageCompressor'),
     { ssr: false }
 );
 
