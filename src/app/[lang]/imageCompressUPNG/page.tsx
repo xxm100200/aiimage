@@ -23,12 +23,12 @@ const ImageCompressUPNG = ({
     }) => {
 
     const language = getLanguageObj(params.lang);
-    const regularData = getSinglePage(path.join(language.contentDir, "pages"));
-    const data = regularData.filter(
-        (page: RegularPage) => page.slug === "imageCompressor",
-    )[0];
-    const { frontmatter, content } = data;
-    const { title, meta_title, description, image } = frontmatter;
+    // const regularData = getSinglePage(path.join(language.contentDir, "pages"));
+    // const data = regularData.filter(
+    //     (page: RegularPage) => page.slug === "imageCompressor",
+    // )[0];
+    // const { frontmatter, content } = data;
+    // const { title, meta_title, description, image } = frontmatter;
     
     // const textTipImgComp = getImageCompressorTextTip(path.join(language.contentDir, "imageCompressor", `textTip.md`));
     // const { frontmatterImgComp } = textTipImgComp;
