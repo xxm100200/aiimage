@@ -79,11 +79,11 @@ export const getImageCompressorTextTip = (filePath: string) => {
     notFound();
   }
 
-  const textTipData = readFile(textTipDataPath);
-  const { content, data: frontmatter } = matter(textTipData);
+  // const textTipData = readFile(textTipDataPath);
+  // const { content, data: frontmatter } = matter(textTipData);
 
-  return {
-    frontmatterImgComp: parseFrontmatter(frontmatter),
-    content,
-  };
+  // return {
+  //   frontmatterImgComp: parseFrontmatter(frontmatter),
+  //   content,
+  // };
 };
