@@ -19,11 +19,11 @@ const DynamicImageCompressor = dynamic(
 export const dynamicParams = false;
 
 // generate static params
-export async function generateStaticParams() {
-    return getActiveLanguages().map((language) => ({
-      lang: language.languageCode,
-    }));
-}
+// export async function generateStaticParams() {
+//     return getActiveLanguages().map((language) => ({
+//       lang: language.languageCode,
+//     }));
+// }
 
 const ImageCompressUPNG = ({ params }: { params: { lang: string } }) => {
 
