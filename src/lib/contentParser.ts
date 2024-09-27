@@ -76,9 +76,9 @@ export const getImageCompressorTextTip = (filePath: string) => {
   const textTipDataPath = path.join(contentPath, filePath);
   console.log("getImageCompressorTextTip----------getImageCompressorTextTip " + textTipDataPath)
   if (!fs.existsSync(textTipDataPath)) {
-    //notFound();
     console.log("getImageCompressorTextTip----------+++++");
-    return {};
+    notFound();
+    //return {};
   }
 
   const textTipData = readFile(textTipDataPath);

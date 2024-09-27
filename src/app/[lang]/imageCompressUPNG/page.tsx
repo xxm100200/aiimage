@@ -2,7 +2,7 @@ import React from 'react';
 //import ImageCompressor from '@/layouts/components/ImageCompressor';
 import HeadInfo from "@/components/HeadInfo";
 import MDXContent from "@/helpers/MDXContent";
-import { getSinglePage, getImageCompressorTextTip } from "@/lib/contentParser";
+import { getSinglePage, getImageCompressorTextTip, getListPage } from "@/lib/contentParser";
 import { getLanguageObj } from "@/lib/languageParser";
 import SeoMeta from "@/partials/SeoMeta";
 import { RegularPage, ImageCompressorLanguage } from "@/types";
@@ -33,7 +33,11 @@ const ImageCompressUPNG = ({
     // const { frontmatter, content } = data;
     // const { title, meta_title, description, image } = frontmatter;
     
-    const textTipImgComp = getImageCompressorTextTip(path.join(language.contentDir, "imageCompressor", "textTip.md"));
+    const data: RegularPage = getListPage(
+        path.join(language.contentDir, "about/_index.md"),
+    );
+    const textTipImgComp = getImageCompressorTextTip(path.join(language.contentDir, "about/_index.md"));
+    //const textTipImgComp = getImageCompressorTextTip(path.join(language.contentDir, "imageCompressor", "textTip.md"));
     //const { frontmatterImgComp } = textTipImgComp;
 
     // const languageObj: ImageCompressorLanguage = {
