@@ -16,6 +16,9 @@ const DynamicImageCompressor = dynamic(
     { ssr: false }
 );
 
+// remove dynamicParams
+export const dynamicParams = false;
+
 const ImageCompressUPNG = ({
         params,
     }: {
