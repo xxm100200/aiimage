@@ -39,7 +39,6 @@ export function middleware(request: NextRequest) {
     );
   }
 
-  console.log(" middleware---------------middleware ")
   return NextResponse.next({
     request: {
       headers: reqHeaders,
