@@ -3,7 +3,7 @@ import React from 'react';
 import HeadInfo from "@/components/HeadInfo";
 import MDXContent from "@/helpers/MDXContent";
 import { getSinglePage, getImageCompressorTextTip, getListPage } from "@/lib/contentParser";
-import { getLanguageObj } from "@/lib/languageParser";
+import { getActiveLanguages, getLanguageObj } from "@/lib/languageParser";
 import SeoMeta from "@/partials/SeoMeta";
 import { RegularPage, ImageCompressorLanguage } from "@/types";
 import path from "path";
@@ -19,11 +19,14 @@ const DynamicImageCompressor = dynamic(
 // remove dynamicParams
 export const dynamicParams = false;
 
-const ImageCompressUPNG = ({
-        params,
-    }: {
-        params: { lang: string };
-    }) => {
+// generate static params
+export async function generateStaticParams() {
+    return getActiveLanguages().map((language) => ({
+      lang: language.languageCode,
+    }));
+}
+
+const ImageCompressUPNG = ({ params }: { params: { lang: string } }) => {
 
     const language = getLanguageObj(params.lang);
     //const regularData = getSinglePage(path.join(language.contentDir, "pages"));
