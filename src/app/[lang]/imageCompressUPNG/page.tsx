@@ -36,7 +36,7 @@ const ImageCompressUPNG = ({
     const data: RegularPage = getListPage(
         path.join(language.contentDir, "about/_index.md"),
     );
-    const textTipImgComp = getImageCompressorTextTip(path.join(language.contentDir, "about/_index.md"));
+    //const textTipImgComp = getImageCompressorTextTip(path.join(language.contentDir, "about/_index.md"));
     //const textTipImgComp = getImageCompressorTextTip(path.join(language.contentDir, "imageCompressor", "textTip.md"));
     //const { frontmatterImgComp } = textTipImgComp;
 
