@@ -36,12 +36,9 @@ const ImageCompressUPNG = ({ params }: { params: { lang: string } }) => {
     // const { frontmatter, content } = data;
     // const { title, meta_title, description, image } = frontmatter;
     
-    const data: RegularPage = getListPage(
-        path.join(language.contentDir, "about/_index.md"),
-    );
     //const textTipImgComp = getImageCompressorTextTip(path.join(language.contentDir, "about/_index.md"));
-    //const textTipImgComp = getImageCompressorTextTip(path.join(language.contentDir, "imageCompressor", "textTip.md"));
-    //const { frontmatterImgComp } = textTipImgComp;
+    const textTipImgComp = getImageCompressorTextTip(path.join(language.contentDir, "imageCompressor", "textTip.md"));
+    const { frontmatterImgComp } = textTipImgComp;
 
     // const languageObj: ImageCompressorLanguage = {
     //     pageTitle: frontmatterImgComp.pageTitle,
