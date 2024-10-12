@@ -2,13 +2,13 @@
     {
       "name": "AI Image Compressor",
       "description": "AI Image Compressor allows you to compress image effortlessly while retaining great quality.",
-      "url": "https://aiimagex.com/ai-image-compressor",
+      "url": "/imageCompressUPNG",
       "image": "/images/image-compress.svg"
     },
     {
-      "name": "AI Image Remove Background",
+      "name": "AI Image Convert",
       "description": "A utility-first CSS framework",
-      "url": "https://aiimagex.com/ai-image-compressor",
+      "url": "/imageConvert",
       "image": "/images/image-compress.svg"
     },
     {

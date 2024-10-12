@@ -1,0 +1,24 @@
+{
+    "title": "How to convert images?",
+    "subtitle": "HEIC to JPG conversion is a simple process that can be done in just a few steps. Here's how to do it:",
+    "steps": [
+      {
+        "name": "Upload HEIC file",
+        "description": "Upload your HEIC file to our website. It's free and takes just a few seconds.",
+        "url": "",
+        "image": "/images/PNG.svg"
+      },
+      {
+        "name": "Convert HEIC to JPG",
+        "description": "Once the upload is complete, the conversion process will begin automatically. This will transform your HEIC file into JPG format.",
+        "url": "",
+        "image": "/images/PNG.svg"
+      },
+      {
+        "name": "Download JPG file",
+        "description": "Once the conversion is complete, you can download your JPG file. It's that easy!",
+        "url": "",
+        "image": "/images/PNG.svg"
+      }
+    ]
+  }

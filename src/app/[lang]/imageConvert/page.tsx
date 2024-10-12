@@ -13,8 +13,8 @@ import HowToList from '@/components/HowToList';
 import Rate from "@/components/Rate";
 import OtherHEICConverters from "@/layouts/components/OtherHEICConverters";
 
-const DynamicImageCompressor = dynamic(
-    () => import('@/components/ImageCompressorUPNG'),
+const DynamicImageToSVG = dynamic(
+    () => import('@/components/ImageToSVG'),
     { ssr: false }
 );
 
@@ -28,21 +28,21 @@ export async function generateStaticParams() {
     }));
 }
 
-const ImageCompressUPNG = ({ params }: { params: { lang: string } }) => {
+const ImageConvert = ({ params }: { params: { lang: string } }) => {
 
     const language = getLanguageObj(params.lang);
-    const regularData = getSinglePage(path.join(language.contentDir, "imageCompressor"));
+    const regularData = getSinglePage(path.join(language.contentDir, "imageConvert"));
     const data = regularData.filter(
-        (page: RegularPage) => page.slug === "imageCompressor",
+        (page: RegularPage) => page.slug === "imageConvert",
     )[0];
     const { frontmatter, content } = data;
     const { title, meta_title, description, image } = frontmatter;
     
-    const textTipImgComp = getImageCompressorTextTip(path.join(language.contentDir, "imageCompressor", "textTip.md"));
+    const textTipImgComp = getImageCompressorTextTip(path.join(language.contentDir, "imageConvert", "textTip.md"));
     const { frontmatterImgComp } = textTipImgComp;
 
-    const howToImageCompress = getJsonFileData(path.join(language.contentDir, 'imageCompressor', 'howTo.json'));
-    const otherConverterImageCompress = getJsonFileData(path.join(language.contentDir, 'imageCompressor', 'otherConverter.json'));
+    const howToImageCompress = getJsonFileData(path.join(language.contentDir, 'imageConvert', 'howTo.json'));
+    const otherConverterImageCompress = getJsonFileData(path.join(language.contentDir, 'imageConvert', 'otherConverter.json'));
     const rate = getJsonFileData(path.join(language.contentDir, 'sections', 'rate.json'));
 
     const languageObj: ImageCompressorLanguage = {
@@ -80,7 +80,7 @@ const ImageCompressUPNG = ({ params }: { params: { lang: string } }) => {
             <PageHeader title={title}>
                 <Breadcrumbs lang={params.lang} />
             </PageHeader>
-            <DynamicImageCompressor languageObj={languageObj} />
+            <DynamicImageToSVG />
             <HowToList resources={howToImageCompress} />
             <section className="section">
                 <div className="container">
@@ -101,4 +101,4 @@ const ImageCompressUPNG = ({ params }: { params: { lang: string } }) => {
     );
 };
 
-export default ImageCompressUPNG;
+export default ImageConvert;

@@ -1,11 +1,11 @@
 import { getLanguageObj } from "@/lib/languageParser";
-import { ImageCompress } from "@/components/ImageCompressTool";
+import { ImageCompressResize } from "@/components/ImageCompressResize";
 
 const ImageTool = ({ params }: { params: { lang: string } }) => {
     const language = getLanguageObj(params.lang);
     return (
         <>
-            <ImageCompress />
+            <ImageCompressResize />
         </>
     )
 }

@@ -24,7 +24,7 @@ import {
 } from "@/components/ui/file-uploader"
 import { Icons } from "@/components/icons"
 
-export const ImageCompress = () => {
+export const ImageCompressResize = () => {
   const [files, setFiles] = useState(null)
   const [showDialog, setShowDialog] = useState(false)
 

@@ -89,3 +89,13 @@ export const getImageCompressorTextTip = (filePath: string) => {
     content,
   };
 };
+
+export const getJsonFileData = (filePath: string) => {
+  const dataPath = path.join(contentPath, filePath);
+  if (!fs.existsSync(dataPath)) {
+    console.log("json file not exist----------+++++");
+    return {};
+  }
+  const jsonData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+  return jsonData;
+};

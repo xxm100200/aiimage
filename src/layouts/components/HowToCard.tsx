@@ -9,15 +9,14 @@ interface Resource {
     url: string;
     image: string;
 }
-// link target="_blank"
-//{cn("rounded-lg bg-card text-card-foreground shadow-sm h-full p-4 flex flex-col")}
-export default function FunctionCard({ resource }: { resource: Resource }) {
+
+export default function HowToCard({ resource }: { resource: Resource }) {
     return (
         <div className="rounded-lg bg-theme-light px-7 py-10 dark:bg-darkmode-theme-light h-full">
             <Link href={resource.url} rel="noopener noreferrer" className="block h-[280px]">
-                <div className="flex flex-col h-full">
+                <div className="flex flex-col h-full items-center">
                     {resource.image && (
-                        <div className="mb-4 h-[50px] w-[80px]">
+                        <div className="mb-4 h-[50px] w-[80px] flex justify-center">
                             <Image
                                 src={resource.image}
                                 alt={resource.name}
@@ -27,12 +26,13 @@ export default function FunctionCard({ resource }: { resource: Resource }) {
                             />
                         </div>
                     )}
-                    <h5 className="font-primary stext-lg font-semibold mb-2 line-clamp-1">{resource.name}</h5>
-                    {/* <p className="text-dark dark:text-white flex-grow overflow-hidden line-clamp-3">{resource.description}</p> */}
+                    <h5 className="font-primary text-lg font-semibold mb-2 line-clamp-1 text-center">{resource.name}</h5>
+                    
                     <blockquote
                         className="mt-8"
                         dangerouslySetInnerHTML={markdownify(resource.description)}
                     />
+                    
                 </div>
             </Link>
         </div>

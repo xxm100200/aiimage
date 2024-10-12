@@ -4,7 +4,7 @@ import FunctionCard from '@/components/FunctionCard'
 
 export default function FunctionList({ resources }: { resources: any }) {
     return (
-        <section className="section">
+        <section className="section pt-5 pb-5">
             <div className="container">
                 <div className="row">
                     <div className="col-12">

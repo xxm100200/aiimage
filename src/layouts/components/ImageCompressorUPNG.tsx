@@ -17,8 +17,8 @@ interface CompressedImage {
   progress: number;
 }
 
-//const ImageCompressor: React.FC<ImageCompressorProps> = ({ languageObj }) => {
-const ImageCompressor = ({ languageObj } : { languageObj: ImageCompressorLanguage }) => {
+//const ImageCompressorUPNG: React.FC<ImageCompressorProps> = ({ languageObj }) => {
+const ImageCompressorUPNG = ({ languageObj } : { languageObj: ImageCompressorLanguage }) => {
   const [originalFiles, setOriginalFiles] = useState<File[]>([]);
   const [compressedImages, setCompressedImages] = useState<CompressedImage[]>([]);
   const [cnum, setCnum] = useState<number>(256);
@@ -307,4 +307,4 @@ const ImageCompressor = ({ languageObj } : { languageObj: ImageCompressorLanguag
     );
 };
 
-export default ImageCompressor;
+export default ImageCompressorUPNG;

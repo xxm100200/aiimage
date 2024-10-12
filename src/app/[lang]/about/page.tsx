@@ -8,14 +8,17 @@ import SeoMeta from "@/partials/SeoMeta";
 import { RegularPage } from "@/types";
 import path from "path";
 import HeadInfo from "@/components/HeadInfo";
+import Jsonld from "@/components/jsonld";
 
 const About = ({ params }: { params: { lang: string } }) => {
   const language = getLanguageObj(params.lang);
-  const data: RegularPage = getListPage(
+  const data = getListPage(
     path.join(language.contentDir, "about/_index.md"),
   );
   const { frontmatter, content } = data;
-  const { title, meta_title, description, image } = frontmatter;
+  const { jsonld, title, meta_title, description, image } = frontmatter;
+
+  const jsonldFilePath = path.join(language.contentDir, "about/_index.md");
 
   return (
     <>
@@ -28,6 +31,7 @@ const About = ({ params }: { params: { lang: string } }) => {
         description={description}
         image={image}
       />
+      { jsonldFilePath && <Jsonld filePath={jsonldFilePath} /> }
       <section className="section-sm">
         <div className="container">
           <div className="row justify-center">

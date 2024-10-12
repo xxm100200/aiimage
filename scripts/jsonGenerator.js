@@ -40,15 +40,6 @@ const getData = (folder, groupDepth) => {
                 .join("/")
                 .replace(/\.[^/.]+$/, "");
             const group = pathParts[groupDepth];
-
-            console.log("-----------------")
-            console.log({
-              lang: lang.languageCode,
-              group: group,
-              slug: slug,
-              frontmatter: data,
-              content: content,
-            });
             return {
               lang: lang.languageCode,
               group: group,

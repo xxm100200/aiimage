@@ -44,6 +44,9 @@ const nextConfig = {
           },
         ];
   },
+  experimental: {
+    serverComponentsExternalPackages: ['sharp', 'tosvg'],
+  },
 };
 
 module.exports = nextConfig;

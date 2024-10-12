@@ -1,0 +1,21 @@
+{
+  "title": "Other HEIC Converters",
+  "convertNow": "Convert Now",
+  "related": [
+       {
+       "name": "HEIC to PNG",
+       "description": "Convert HEIC images to PNG format with high quality.",
+       "url": "/heic-to-png"
+       },
+       {
+       "name": "HEIC to WEBP",
+       "description": "Transform HEIC files to WEBP for better web performance.",
+       "url": "/heic-to-webp"
+       },
+       {
+       "name": "HEIC to GIF",
+       "description": "Convert HEIC images to animated GIF format.",
+       "url": "/heic-to-gif"
+       }
+   ]
+}

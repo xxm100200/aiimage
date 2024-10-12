@@ -1,0 +1,69 @@
+.star-rating-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.star-rating-main {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.star-rating-background,
+.star-rating-foreground {
+    display: flex;
+}
+
+.star {
+    font-size: 2rem;
+    margin-right: 5px;
+    user-select: none;
+}
+
+.star-rating-background .star {
+    color: #ddd; /* 空心星星颜色 */
+}
+
+.star-rating-foreground .star {
+    color: gold; /* 填充星星颜色 */
+}
+
+.star-rating-foreground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.star-rating-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.star-overlay {
+    width: 10%; /* 100% / 10 = 每个半星占10%宽度 */
+    cursor: pointer;
+}
+
+.rating-value {
+    color: white; /* 将评分数值的颜色设置为白色 */
+    margin-left: 1rem; /* 与星星间隔 */
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.rating-reviews {
+    margin-top: 0.2rem;
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+}

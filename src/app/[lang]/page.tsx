@@ -17,6 +17,7 @@ import { getSinglePage } from "@/lib/contentParser";
 import HeadInfo from "@/components/HeadInfo";
 import fs from 'fs'
 import FunctionList from "@/components/FunctionList";
+import Jsonld from "@/components/jsonld";
 
 // remove dynamicParams
 export const dynamicParams = false;
@@ -44,9 +45,11 @@ const Home = ({ params }: { params: { lang: string } }) => {
   );
   const { frontmatter } = homepage;
   const {
+    jsonld,
     banner,
     features,
   }: {
+    jsonld: { content: any };
     banner: { title: string; image: string; content?: string; button?: Button };
     features: Feature[];
   } = frontmatter;
@@ -61,13 +64,16 @@ const Home = ({ params }: { params: { lang: string } }) => {
   const resources = JSON.parse(fs.readFileSync(resourcesPath, 'utf8'))
   console.log(" resources+++++++++++++++++++++resources " + resources)
 
+  const jsonldFilePath = path.join(language.contentDir, "homepage/_index.md");
+
   return (
     <>
       <HeadInfo
         lang={params.lang}
       />
       <SeoMeta />
-      <section className="section pt-14">
+      { jsonldFilePath && <Jsonld filePath={jsonldFilePath} /> }
+      <section className="section pt-14 pb-10">
         <div className="container">
           <div className="row justify-center">
             <div className="lg:col-7 md:col-9 mb-8 text-center">
@@ -79,7 +85,7 @@ const Home = ({ params }: { params: { lang: string } }) => {
                 className="mb-8"
                 dangerouslySetInnerHTML={markdownify(banner.content ?? "")}
               />
-              {banner.button!.enable && (
+              {/* {banner.button!.enable && (
                 <Link
                   className="btn btn-primary"
                   href={banner.button!.link}
@@ -90,9 +96,9 @@ const Home = ({ params }: { params: { lang: string } }) => {
                 >
                   {banner.button!.label}
                 </Link>
-              )}
+              )} */}
             </div>
-            {banner.image && (
+            {/* {banner.image && (
               <div className="col-12">
                 <ImageFallback
                   src={banner.image}
@@ -103,12 +109,12 @@ const Home = ({ params }: { params: { lang: string } }) => {
                   priority
                 />
               </div>
-            )}
+            )} */}
           </div>
         </div>
       </section>
 
-      {features.map((feature, index: number) => (
+      {/* {features.map((feature, index: number) => (
         <section
           key={index}
           className={`section-sm ${index % 2 === 0 && "bg-gradient"}`}
@@ -160,10 +166,10 @@ const Home = ({ params }: { params: { lang: string } }) => {
             </div>
           </div>
         </section>
-      ))}
+      ))} */}
 
-      <Testimonials data={testimonial} />
-      <CallToAction data={callToAction} />
+      {/* <Testimonials data={testimonial} /> */}
+      {/* <CallToAction data={callToAction} /> */}
       <FunctionList resources={resources} />
 
       <section className="section">
