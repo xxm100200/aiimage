@@ -19,8 +19,8 @@ const CategorySingle = ({
 }: {
   params: { single: string; lang: string };
 }) => {
-  const language = getLanguageObj("en");
-  const posts: Post[] = getSinglePage(
+    const language = getLanguageObj(params.lang);
+    const posts: Post[] = getSinglePage(
     path.join(language.contentDir, blog_folder),
   );
   const filterByCategories = taxonomyFilter(posts, "categories", params.single);
