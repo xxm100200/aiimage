@@ -71,7 +71,7 @@ export const getSinglePage = (folder: string) => {
   return filterByDate;
 };
 
-// get all imageCompressor textTip, ex: imageCompressor/textTip.md
+// get all imageCompressorUPNG textTip, ex: imageCompressorUPNG/textTip.md
 export const getImageCompressorTextTip = (filePath: string) => {
   const textTipDataPath = path.join(contentPath, filePath);
   console.log("getImageCompressorTextTip----------getImageCompressorTextTip " + textTipDataPath)

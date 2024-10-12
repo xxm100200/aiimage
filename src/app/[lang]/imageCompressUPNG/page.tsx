@@ -31,19 +31,50 @@ export async function generateStaticParams() {
 const ImageCompressUPNG = ({ params }: { params: { lang: string } }) => {
 
     const language = getLanguageObj(params.lang);
-    const regularData = getSinglePage(path.join(language.contentDir, "imageCompressor"));
-    const data = regularData.filter(
-        (page: RegularPage) => page.slug === "imageCompressor",
-    )[0];
-    const { frontmatter, content } = data;
+    const regularData = getSinglePage(path.join(language.contentDir, "imageCompressorUPNG"));
+    let data, frontmatter, content;
+    try {
+        data = regularData.filter(
+            (page: RegularPage) => page.slug === "imageCompressorUPNG",
+        )[0];
+        if (!data) {
+            throw new Error("Image compressor data not found");
+        }
+        ({ frontmatter, content } = data);
+    } catch (error) {
+        console.error("Error processing image compressor data:", error);
+        // Provide fallback values
+        frontmatter = {
+            title: "Image Compressor",
+            meta_title: "Image Compressor",
+            description: "Compress your images easily",
+            image: "/default-image.jpg"
+        };
+        content = "Content not available";
+    }
+
     const { title, meta_title, description, image } = frontmatter;
     
-    const textTipImgComp = getImageCompressorTextTip(path.join(language.contentDir, "imageCompressor", "textTip.md"));
-    const { frontmatterImgComp } = textTipImgComp;
-
-    const howToImageCompress = getJsonFileData(path.join(language.contentDir, 'imageCompressor', 'howTo.json'));
-    const otherConverterImageCompress = getJsonFileData(path.join(language.contentDir, 'imageCompressor', 'otherConverter.json'));
-    const rate = getJsonFileData(path.join(language.contentDir, 'sections', 'rate.json'));
+    // Add similar error handling for other data fetching functions
+    let textTipImgComp, frontmatterImgComp, howToImageCompress, otherConverterImageCompress, rate;
+    try {
+        textTipImgComp = getImageCompressorTextTip(path.join(language.contentDir, "imageCompressorUPNG", "textTip.md"));
+        ({ frontmatterImgComp } = textTipImgComp);
+        howToImageCompress = getJsonFileData(path.join(language.contentDir, 'imageCompressorUPNG', 'howTo.json'));
+        otherConverterImageCompress = getJsonFileData(path.join(language.contentDir, 'imageCompressorUPNG', 'otherConverter.json'));
+        rate = getJsonFileData(path.join(language.contentDir, 'sections', 'rate.json'));
+    } catch (error) {
+        console.error("Error fetching additional data:", error);
+        // Provide fallback values for these as well
+        frontmatterImgComp = {
+            pageTitle: "Image Compressor",
+            pageDescription: "Compress your images",
+            // ... add other necessary fallback properties
+        };
+        howToImageCompress = [];
+        otherConverterImageCompress = { related: [], title: "Other Converters", convertNow: "Convert Now" };
+        rate = {};
+    }
 
     const languageObj: ImageCompressorLanguage = {
         pageTitle: frontmatterImgComp.pageTitle,
